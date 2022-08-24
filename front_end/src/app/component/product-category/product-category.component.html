@@ -1,0 +1,27 @@
+
+
+  <nav mat-tab-nav-bar>
+    <a mat-tab-link routerLink="home">Home</a>
+    <a mat-tab-link (click)="showCategory('top_offers')">Top Offers</a>
+    <a mat-tab-link (click)="showCategory('laptop')">Laptop</a>
+    <a mat-tab-link (click)="showCategory('mobile_phones')">Mobile Phones</a>
+    <a mat-tab-link (click)="showCategory('fashion')">Top Offers</a>
+    <a mat-tab-link (click)="showCategory('Watch')">Watch</a>
+  </nav>
+<div class="container">
+  <div class="row">
+    <button class="btn sortBtn" (click)="sortProducts()">Sort</button>
+    <ng-container *ngFor="let item of productList">
+      <div class="card col-md-2">
+        <div>
+        <button mat-mini-fab>
+        <mat-icon >bookmark_border</mat-icon></button></div>
+        <img src="/assets/{{item.imageURL}}" alt="">
+        <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.name}}</h5>
+        <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
+        <p><strong>Price:</strong>₹{{item.price}}</p>
+        <button class="btn btn-primary" (click)=addtoCart(item)>Add To Cart</button>
+    </div>
+    </ng-container>
+  </div>
+</div>

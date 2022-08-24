@@ -1,0 +1,101 @@
+.form-control{
+  border-radius: 3px;
+  width: 600px;
+  margin-left: 20px;
+}
+.Search{
+  border-radius: 3px;
+  width: 600px;
+  margin-left: 20px;
+
+}
+
+.search-icon {
+  position: absolute;
+  z-index: 10;
+  right: 42%;
+  top: 20px;
+  color: blue;
+}
+
+.btn-admin{
+  float: right;
+  background-color:white;
+  color: blue;
+  font-weight: bold;
+}
+
+nav{height: 80px; text-align: center; vertical-align:middle; background: rgb(14, 24, 28);
+  background: linear-gradient(90deg, rgb(10, 22, 28) 0%, 100%);
+}
+.card-top{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: .25rem;
+}
+
+.img-container{
+  width: 40%;
+  height: 60%;
+}
+
+.item{
+  width: 200px;
+  padding-top: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.card{
+  padding: 40px;
+  margin: 50px;
+  width: 340px;
+  cursor: pointer;
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
+  border-radius: 15px;
+}
+
+.card img{
+  align-self: center;
+  width: 90%;
+  height: 60%;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  transition: 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.card img:hover{
+  transition: 0.6s ease-in-out;
+  transform: scale(1.1);
+
+}
+
+.card p {
+  text-align: center;
+}
+
+.card h5 {
+  text-align: center;
+}
+
+.item h4 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}

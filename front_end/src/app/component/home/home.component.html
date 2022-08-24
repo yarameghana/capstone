@@ -1,0 +1,25 @@
+
+  <nav mat-tab-nav-bar class="navbar" >
+    <a mat-tab-link (click)="filter('')" >Home</a>
+    <a mat-tab-link (click)="filter('FURNITURE')">Furniture</a>
+    <a mat-tab-link (click)="filter('STORAGE')">Storage</a>
+    <a mat-tab-link (click)="filter('DECOR')">Decor</a>
+    <a mat-tab-link (click)="filter('FURNISHINGS')">Furnishings</a>
+    <a mat-tab-link (click)="filter('APPLIANCES')">Appliances</a>
+  </nav>
+<div class="container">
+  <div class="row">
+    <ng-container *ngFor="let item of filterCategory |filter  :searchKey:'name'">
+      <div class="card col-md-2">
+        <div>
+          <button mat-mini-fab (click)=addToWishlist(item) >
+          <mat-icon >favorite_border</mat-icon></button></div>
+        <img src="/assets/{{item.imageURL}}" alt="">
+        <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch; font-size: 17px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-weight: bold; color: rgb(0, 86, 177); padding: 5px;">{{item.name}}</h5>
+        <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
+        <p><strong>Price:</strong>₹{{item.price}}</p>
+        <button  class="btn btn-primary" (click)=addtoCart(item)>Add To Cart</button>
+    </div>
+    </ng-container>
+  </div>
+</div>

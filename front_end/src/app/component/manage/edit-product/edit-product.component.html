@@ -1,0 +1,28 @@
+<div class="editComponent" *ngIf="dataLoaded" >
+  <div class="data">
+    <h2>Edit Product Details</h2>
+    <form [formGroup]="updateProductForm" (ngSubmit)="updateProduct()" name="form1">
+        <label>Product ID</label>
+      <input value="{{retData.productId}}" type="text" disabled />
+      <label>Name</label>
+      <input formControlName="name" value="{{retData.name}}" type="text" />
+      <label>Description</label>
+      <input formControlName="desc" value="{{retData.description}}" type="text" />
+      <label>Price</label>
+      <input formControlName="price" value="{{retData.price}}" type="text" />
+        <label for="category">Product Category</label>
+        <select formControlName="category" class="form-select" aria-label="Default select example">
+          <option value="FURNITURE">Furniture</option>
+          <option value="STORAGE">Storage</option>
+          <option value="DECOR">Decor</option>
+          <option value="FURNISHINGS">Furnishings</option>
+          <option value="APPLIANCES">Appliances</option>
+        </select>
+        <label>Image URL</label>
+      <input formControlName="image" value="{{retData.imageURL}}" type="text" />
+      <label>stock</label>
+      <input formControlName="stock" value="{{retData.stock}}" type="text" />
+      <button type="submit" class="btn btn-success" > Update </button>
+    </form>
+  </div>
+</div>

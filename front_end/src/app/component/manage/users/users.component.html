@@ -1,0 +1,27 @@
+<div class="container">
+  <h2>Manage Users</h2>
+  <table class="content-table">
+    <thead>
+      <tr>
+        <th scope="col">Sr. No.</th>
+        <th scope="col">User Id</th>
+        <th scope="col">User Name</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of retData; let i = index">
+        <td>{{i+1}}</td>
+        <td>{{user.userId}}</td>
+        <td contenteditable>{{user.username}}</td>
+        <td> 
+          <button mat-raised-button color="primary" id={{user.userId}} (click)="editUser($event)" style="cursor:pointer;"><mat-icon>edit</mat-icon></button>
+        </td>
+        <td>
+          <i id={{user.userId}} class="btn btn-danger material-icons" style="color:red" (click)="deleteUser($event)" style="cursor:pointer;">delete</i>
+        </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

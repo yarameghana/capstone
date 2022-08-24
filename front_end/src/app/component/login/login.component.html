@@ -1,0 +1,31 @@
+<div class="main">
+  <div class="content col-md-6 col-sm-12">
+    <div class="login-main-text">
+      <h2 style="text-align:center; font-size: 30px; color: rgb(0, 144, 10);">Login</h2>
+      <p style="text-align:center">Get access to your Orders, Wishlist and Recommendations.</p>
+    </div>
+    <div class="login-form" style="text-align: center;">
+      <form class="form" [formGroup]="loginForm" (ngSubmit)="loginUser()" name="form1">
+        
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Email ID</mat-label>
+      <input formControlName="userName" matInput placeholder="Enter User Email ID" value="Sushi">
+    </mat-form-field>
+    <div >
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Enter your password</mat-label>
+        <input formControlName="password" matInput [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+        <div class="loginbtn">
+          <button type="submit" class="btn" style="text-align: center; background-color: orangered; color: white" > Login </button>
+        </div>
+        <h2 style="text-align:center">OR</h2>
+        <a style="display: flex; justify-content: center" routerLink="/signup"> New here? Create an account </a>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="main">
+  <div class="content col-md-6 col-sm-12">
+    <div class="login-main-text">
+      <h2 style="text-align:center; font-size: 30px; color: rgb(0, 144, 10);">Sign Up</h2>
+      <p style="text-align:center">Looks like you are new here! <br />
+        Sign up here to get started</p>
+    </div>
+    
+    <div class="login-form" style="text-align: center;">
+      <form class="form" [formGroup]="signupForm" (ngSubmit)="signupUser()" name="form1">
+        
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Email ID</mat-label>
+      <input formControlName="userName" matInput placeholder="Enter User Email ID" value="Sushi">
+    </mat-form-field>
+    <div >
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Enter your password</mat-label>
+        <input formControlName="password" matInput [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+        <div class="loginbtn">
+          <button type="submit" class="btn" style="text-align: center; background-color: orangered; color: white" > Sign Up </button>
+        </div>
+        <h2 style="text-align:center">OR</h2>
+         <a style="display: flex; justify-content: center" routerLink="/login"> Existing User? Log in </a>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+<div >
+  <mat-tab-group>
+    <mat-tab label="Product List"><div class="productcontainer">
+      <h2>The Product List</h2>
+      <table class="content-table">
+        <thead>
+          <tr>
+            <th scope="col">Sr. No.</th>
+            <th scope="col">Product Id</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Stock</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of products; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{product.productId}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.stock}}</td>
+        </tr>
+        </tbody>
+      </table>
+      <br />
+      <button class="btn btn-success" routerLink="/admin/manage/products">Get All Products</button>
+    </div></mat-tab>
+    <mat-tab label="users List"> <div class="userscontainer">
+      <h2>The Users List</h2>
+      <table class="content-table">
+        <thead>
+          <tr>
+            <th scope="col">Sr. No.</th>
+            <th scope="col">User Id</th>
+            <th scope="col">User Name</th>
+            <th scope="col">Role</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{user.userId}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.role}}</td>
+        </tr>
+        </tbody>
+      </table>
+      <br />
+      <button class="btn btn-success" routerLink="/admin/manage/users">Get Users</button>
+    </div>s
+  </mat-tab>
+  </mat-tab-group>
+  

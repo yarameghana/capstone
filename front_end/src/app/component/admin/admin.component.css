@@ -1,0 +1,44 @@
+.productcontainer{
+  text-align: center;
+  width: 100%;
+  margin-top: 10px
+}
+
+.userscontainer{
+  text-align: center;
+  width: 100%;
+  margin-top: 10px
+}
+.content-table {
+    width: 90%;
+    padding: 5px;
+    text-align: left;
+    align-items: center;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 1000px;
+    border-radius: 5px 5px 0px 0px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  }
+
+  .content-table thead tr{
+background-color: teal;
+color: aliceblue;
+text-align: left;   
+font-weight: bold;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+height: 40px;
+  }
+
+  .content-table th, .content-table td{
+    padding: 10px;
+  }
+  .content-table tbody tr{
+    border-bottom: 1px solid #dddddd;
+  }
+  .content-table tbody tr:nth-of-type(even){
+    background-color: rgb(230, 230, 230);
+  }
+  
